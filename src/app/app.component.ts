@@ -5,12 +5,13 @@ import { ModalService } from './services/modal.service';
 import { Store } from '@ngrx/store';
 import { setCounter,incrementBy } from './state/counter.actions';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CounterComponent, FormsModule],
+  imports: [RouterOutlet, CounterComponent, FormsModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -22,7 +23,10 @@ export class AppComponent {
   inputValue: number = 0;
   inputInterval:number = 0;
   currentIncrement!: number;
-
+  showButtons = true;
+  display: { [key: string]: string } = {
+    'display': 'none',
+  };
   constructor(private store: Store, private modalService: ModalService) {}
 
   updateCounter() {
@@ -50,10 +54,12 @@ export class AppComponent {
 
   closeCounterModal() {
     this.modalService.closeCounterModal();
+    this.showButtons = true;
   }
 
   closeIntervalModal() {
     this.modalService.closeIntervalModal();
+    this.showButtons = false;
   }
 
 }
