@@ -1,0 +1,121 @@
+
+
+//LAYOUT
+.counter-container {
+    color: #31c48d;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #33333d;
+    overflow: hidden;
+  
+
+}
+
+.top {
+    margin-left: auto;
+    padding: 25px 25px 0 0;
+}
+
+//TYPOGRAPHY
+
+.counter {
+    font-size: 100px;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 0 3px black;
+}
+
+p {
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+
+
+.reset,
+.increase,
+.decrease {
+    cursor: pointer;
+}
+
+.reset:hover {
+    fill: #31c48d;
+}
+
+
+
+//BUTTONS
+
+
+button {
+    width: 50%;
+    height: 150px;
+    background-color: inherit;
+    border: none;
+}
+
+
+.increase {
+    border-top: 0.5px solid #6a6a76;
+    border-left: 0.5px solid #6a6a76;
+}
+
+
+.decrease {
+    border-top: 0.5px solid #6a6a76;
+}
+
+
+
+.increase:hover,
+.decrease:hover {
+    background-color: #393944;
+    svg {
+        fill:#31c48d;
+    }
+}
+
+
+
+
+
+
+//MEDIA QUERY
+@media screen and (min-width: 480px) {
+
+    .counter-container {
+       height: 65vh;
+       width: 80vw;
+       margin:auto;
+       box-shadow: 0 0 7px rgb(20, 20, 20);
+       border-radius: 20px;
+    }
+
+    .counter {
+        font-size: 250px;
+    }
+
+    p {
+        font-size: 1.6rem;
+    }
+
+    .selection {
+            right: 27em;
+            position: absolute;
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+    }
+
+
+  }
+
+
+  @media screen and (min-width: 840px) {
+    .counter-container {
+       width: 55vw;
+    }
+  }

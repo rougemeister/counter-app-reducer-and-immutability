@@ -1,0 +1,40 @@
+.options {
+    position: relative;
+    cursor: pointer;
+}
+
+.options:hover {
+    svg {
+        fill: #31c48d;
+    }
+}
+
+.selection {
+    width: 150px;
+    right: 0.1em;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.selection ul {
+    list-style: none;
+}
+
+.selection li {
+    font-weight: 700;
+    padding: 10px 15px;
+}
+
+.selection li:hover {
+ 
+    background-color: #31c48d;
+    color: white;
+}
+
+
+.counterModal {
+    position: fixed;
+    margin: auto;
+}

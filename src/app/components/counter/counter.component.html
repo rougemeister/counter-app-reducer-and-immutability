@@ -1,0 +1,12 @@
+
+<div class="counter-container">
+    <app-options class="top"/>
+        <p>Counter</p>
+        <div class="counter">{{ count$ | async}}</div>
+    <div class="buttons">
+        <button (click)="decrement()"  class="decrease">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M154-412v-136h652v136H154Z"/></svg>        </button>
+        <button (click)="increment()"  class="increase">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M412-412H154v-136h258v-259h136v259h258v136H548v258H412v-258Z"/></svg>        </button>
+    </div>
+</div>
