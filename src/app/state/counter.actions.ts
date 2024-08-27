@@ -23,6 +23,9 @@ export const incrementBy = createAction(
 );
 
 export const decrementBy = createAction(
-  '[Counter Component] Increment By',
+  '[Counter Component] Decrement By',
   props<{ value: number }>() // This will carry the payload
 );
+
+// Add the undo action here
+export const undo = createAction('[Counter Component] Undo');

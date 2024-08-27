@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { increment, decrement, reset,incrementBy, decrementBy } from '../../state/counter.actions';
 import { AsyncPipe } from '@angular/common';
-import { selectCount } from '../../state/counter.selector';
+import { selectCurrentCount } from '../../state/counter.selector';
 import { OptionsComponent } from '../options/options.component';
 import { AppState } from '../../app.state';
 
@@ -18,10 +18,11 @@ export class CounterComponent {
   count$: Observable<number>;
 
   constructor(private store: Store<AppState>) {
-    this.count$ = this.store.select(selectCount);
+    this.count$ = this.store.select(selectCurrentCount);
     this.count$.subscribe((count) =>
       localStorage.setItem('count', JSON.stringify(count))
     );
+    console.log(this.count$)
   }
 
   increment() {

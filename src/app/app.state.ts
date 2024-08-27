@@ -1,5 +1,5 @@
+import { CounterState } from './counter.state';
+
 export interface AppState {
-    counter: any;
-    count: number;
-  }
-  
+  count: CounterState;
+}
