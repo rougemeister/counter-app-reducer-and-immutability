@@ -11,3 +11,7 @@ export const selectCurrentCount = createSelector(
   selectCountState,
   (state: CounterState) => state.current
 );
+export const selectHistory = createSelector(
+  selectCountState,
+  (state: CounterState) => state.history
+);

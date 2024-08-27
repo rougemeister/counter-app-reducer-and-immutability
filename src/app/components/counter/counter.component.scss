@@ -33,7 +33,46 @@ p {
     font-size: 1.1rem;
 }
 
+.history-container {
+    display: flex;
+    flex-direction: column;
+    color: #31c48d;
+    font-weight: 700;
+    width: 200px;
+    margin:12px auto;
+    white-space: nowrap; /* Prevents the text from wrapping to the next line */
 
+    ul {
+   
+        list-style: none;
+        li{
+        padding: 5px;
+    }
+    }
+}
+
+.history {
+    overflow: hidden;
+    text-align: center;
+    span {
+        padding: 10px;
+    }
+}
+.history-list {
+    display: flex;
+    
+}
+
+
+.undo {
+    padding: 10px;
+    background-color: #31c48d;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    color: white;
+    font-weight: bold;
+}
 
 .reset,
 .increase,
@@ -50,7 +89,7 @@ p {
 //BUTTONS
 
 
-button {
+.btn {
     width: 50%;
     height: 150px;
     background-color: inherit;
